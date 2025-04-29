@@ -1,16 +1,15 @@
 -- Krystal Dance V3, Made by Hemi (es muy janky)
--- Edited by albeiro34210
 if not isfolder("Dances") then 
     makefolder("Dances")
     end
 local idleanim = game:GetObjects("rbxassetid://136078657506707")[1]
-local walkanim = game:GetObjects("rbxassetid://70574608581607")[0.2]
+local walkanim = game:GetObjects("rbxassetid://130213485744288")[1]
 local randompart = Instance.new("Part",game:GetService("RunService"))
 local coolparticles = game:GetObjects("rbxassetid://87299663038091")[1].ParticleAttachment
 coolparticles.Parent = randompart
 local script = Instance.new("LocalScript")
 local OxideApi = loadstring(game:HttpGet("https://raw.githubusercontent.com/Nitro-GT/Utils/refs/heads/main/OxideApi"))()
-OxideApi.Notification("Krystal Dance V3, Made by Hemi. Edited by albeiro34210",10)
+OxideApi.Notification("Krystal Dance V3, Made by Hemi",10)
 local playanother = false
 local playing = false
 local dancing = false
@@ -364,8 +363,8 @@ local mode = 1
         idwithoutthatbit= string.gsub(id,"Dances/","")
         if not isfile(id) then 
             writefile(id,game:HttpGet("https://github.com/Nitro-GT/music/raw/refs/heads/main/"..idwithoutthatbit))
-        end
-        repeat task.wait() until isfile(id)
+end
+       repeat task.wait() until isfile(id)
         local s = Instance.new("Sound")
         s.Parent = game:GetService("RunService")
         s.SoundId = getcustomasset(id)
@@ -375,6 +374,7 @@ local mode = 1
 local INPUTLOOP 
 local uis = game:GetService("UserInputService")
 INPUTLOOP = uis.InputBegan:Connect(function(k,chatting)
+	if char.Humanoid.Sit == true then return end
     if chatting then return end 
         local k = string.lower(string.gsub(tostring(k.KeyCode),"Enum.KeyCode.",""))
 	if mode == 1 then 
@@ -774,6 +774,18 @@ end
         stopanim()
         sound69:Stop()
     end
+elseif k == "u" then 
+    if dancing == false then 
+        stopanim()
+        dancing = true
+        task.wait(.005)
+        sound69.SoundId = customasset("Dances/bloodpop.mp3")
+        sound69:Play()
+        playanim(132026285699359)
+    else
+        stopanim()
+        sound69:Stop()
+    end
         end 
 end
 if k == "m" then 
@@ -795,6 +807,7 @@ if k == "m" then
     end
 end)
 char.Humanoid:GetPropertyChangedSignal("MoveDirection"):Connect(function()
+	if char.Humanoid.Sit == false then 
     if char.Humanoid.MoveDirection == Vector3.new(0,0,0) and dancing == false and idle == false then
     walking = false
     idle = true
@@ -813,7 +826,29 @@ char.Humanoid:GetPropertyChangedSignal("MoveDirection"):Connect(function()
                 playanim(130213485744288,1,false,walkanim)
             end
     end
+end
     end)
+	char.Humanoid:GetPropertyChangedSignal("Sit"):Connect(function()
+		print("sit")
+		if char.Humanoid.Sit == true then 
+			stopanim()
+        sound69:Stop()
+            stopanim()
+			math.randomseed(os.clock())
+			if math.random(1,2) == 1 then 
+			playanim(75070741788263,1,false)
+			else 
+			playanim(122775909441631,1,false)
+			end
+		else 
+			stopanim()
+			task.wait(.05)
+			stopanim()
+			char.Humanoid:Move(Vector3.new(0,0,-1),true)
+			char.Humanoid:Move(Vector3.new(0,0,-1),true)
+			char.Humanoid:Move(Vector3.new(0,0,-1),true)
+		end
+	end)
 
 local RunService = game:GetService("RunService")
 
