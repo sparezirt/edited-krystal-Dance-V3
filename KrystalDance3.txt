@@ -102,11 +102,11 @@ local script = Instance.new("Script")
 ArtificialHB = Instance.new("BindableEvent",script)
 ArtificialHB.Name = "Heartbeat"
 script:WaitForChild("Heartbeat")
-frame = 1 / 60
-tf = 0
-allowframeloss = false
-tossremainder = false
-lastframe = tick()
+local frame = 1 / 60
+local tf = 0
+local allowframeloss = false
+local tossremainder = false
+local lastframe = tick()
 script.Heartbeat:Fire()
 game:GetService("RunService").Heartbeat:Connect(function(s,p)
    tf = tf + s
@@ -390,9 +390,9 @@ end
         end)
 	local customasset = function(id)
         if exploit ~= "CaetSploit" then
-        idwithoutthatbit= string.gsub(id,"Dances/","")
+        local idwithoutthatbit= string.gsub(id,"Dances/","")
         if not isfile(id) then 
-         writefile(id,game:HttpGet("https://github.com/Nitro-GT/music/raw/refs/heads/main/"..idwithoutthatbit))
+         writefile(id,game:HttpGet("https://github.com/albeiro34210/fan-made-nitrogt-music/raw/refs/heads/main/"..idwithoutthatbit))
         end
        repeat task.wait() until isfile(id)
     end
@@ -928,7 +928,59 @@ sound69:Play()
         stopanim()
         
     end
-        end 
+elseif k == "c" then
+    if dancing == false then
+        stopanim()
+        dancing = true
+        task.wait(.005)
+        sound69.SoundId = customasset("Dances/egypt.mp3")
+        timeposcur = sound69.TimePosition
+        sound69:Play()
+        playanim(100136360352723)
+    else
+        stopanim()
+
+    end
+elseif k == "v" then
+    if dancing == false then
+        stopanim()
+        dancing = true
+        task.wait(.005)
+        sound69.SoundId = customasset("Dances/fear.ogg")
+        timeposcur = sound69.TimePosition
+        sound69:Play()
+        playanim(7828640127)
+    else
+        stopanim()
+
+    end
+elseif k == "p" then
+    if dancing == false then
+        stopanim()
+        dancing = true
+        task.wait(.005)
+        sound69.SoundId = customasset("Dances/Immaterial.mp3")
+        timeposcur = sound69.TimePosition
+        sound69:Play()
+        playanim(90127032448242)
+    else
+        stopanim()
+
+    end
+elseif k == "l" then
+    if dancing == false then
+        stopanim()
+        dancing = true
+        task.wait(.005)
+        sound69.SoundId = customasset("Dances/xavier's.mp3")
+        timeposcur = sound69.TimePosition
+        sound69:Play()
+        playanim(86319138773534)
+    else
+        stopanim()
+
+    end
+end
 end
 if k == "equals" then 
     playbacktrack = not playbacktrack
@@ -1048,18 +1100,18 @@ local oldC0N = Neck.C0
 local updatesPerSecond = 10
 local Character = char 
 local Root = char.HumanoidRootPart
-introsound = Instance.new("Sound",Root)
+local introsound = Instance.new("Sound",Root)
 introsound.SoundId = "rbxassetid://236146895"
 introsound.Volume = 8
 introsound:Play()
 
-bigfedora = Instance.new("Part",Character)
+local bigfedora = Instance.new("Part",Character)
 bigfedora.Size = Vector3.new(2,2,2)
 bigfedora.CFrame = bigfedora.CFrame:inverse() * Root.CFrame * CFrame.new(math.random(-60,60),-.2,math.random(-60,60)) * CFrame.Angles(0,math.rad(math.random(-180,180)),0)
 bigfedora.CanCollide = false
 bigfedora.Anchored = true
 bigfedora.Name = "mbigf"
-mbigfedora = Instance.new("SpecialMesh", bigfedora)
+local mbigfedora = Instance.new("SpecialMesh", bigfedora)
 mbigfedora.MeshType = "FileMesh"
 mbigfedora.Scale = Vector3.new(5, 5, 5)
 mbigfedora.MeshId,mbigfedora.TextureId = 'http://www.roblox.com/asset/?id=1125478','http://www.roblox.com/asset/?id=1125479'
@@ -1073,7 +1125,7 @@ for i = 1, 50 do
 bigfedora.CFrame = bigfedora.CFrame:lerp(CFrame.new(char.Head.Position),.05)
 task.wait(1/60)
 end
-zmc = 0
+local zmc = 0
 for i = 1, 29 do
 zmc = zmc + 2
 mbigfedora.Scale = mbigfedora.Scale - Vector3.new(.25,.25,.25)
@@ -1096,7 +1148,7 @@ repeat
     task.wait(1/60)
     nim=nim+1
 until nim==3
-RunService.RenderStepped:Connect(function(deltaTime: number)
+RunService.RenderStepped:Connect(function(deltaTime, number)
     	local function Alpha(n)
 		return math.clamp(n*deltaTime*60,0,1)
 	end
