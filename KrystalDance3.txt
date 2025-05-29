@@ -485,11 +485,11 @@ if dancing == false then
 	stopanim()
 dancing = true
 task.wait(.005)
-	sound69.SoundId = customasset("Dances/valen.mp3")
+	sound69.SoundId = customasset("Dances/Assumptions.mp3")
 	sound69.PlaybackSpeed = 1
 	timeposcur = sound69.TimePosition 
 sound69:Play()
-	playanim(136962185637891)
+	playanim(75148929064618)
 else
 	stopanim()
 	sound69.PlaybackSpeed = 1
