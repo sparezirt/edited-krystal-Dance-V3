@@ -936,7 +936,7 @@ elseif k == "c" then
         sound69.SoundId = customasset("Dances/ForsakenHakariDance.mp3")
         timeposcur = sound69.TimePosition
         sound69:Play()
-        playanim(138019937280193,1.95)
+        playanim(138019937280193,2.25)
     else
         stopanim()
 
@@ -975,7 +975,7 @@ elseif k == "l" then
         sound69.SoundId = customasset("Dances/CarShearer.mp3")
         timeposcur = sound69.TimePosition
         sound69:Play()
-        playanim(82286209518466,1.95)
+        playanim(82286209518466,2.15)
     else
         stopanim()
 
