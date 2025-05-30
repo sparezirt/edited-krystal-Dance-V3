@@ -416,7 +416,7 @@ end
             sound69.PlaybackSpeed = 1
             if playbacktrack == true then 
             sound69.SoundId = customasset("Dances/ElevatorMusic.mp3")
-            sound69.Volume = 3.95
+            sound69.Volume = 4.95
             else 
                 sound69:Stop()
             end
