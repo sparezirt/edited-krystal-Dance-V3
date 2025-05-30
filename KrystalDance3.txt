@@ -767,7 +767,7 @@ sound69:Play()
         sound69.SoundId = customasset("Dances/ElevatorMusic2.mp3")
         timeposcur = sound69.TimePosition 
 sound69:Play()
-        playanim(100177280567649)
+        playanim(16361576857)
     else
         stopanim()
         
