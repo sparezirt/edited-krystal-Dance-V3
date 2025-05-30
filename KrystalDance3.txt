@@ -975,7 +975,7 @@ elseif k == "l" then
         sound69.SoundId = customasset("Dances/CarShearer.mp3")
         timeposcur = sound69.TimePosition
         sound69:Play()
-        playanim(82286209518466,1,95)
+        playanim(82286209518466,1,94)
     else
         stopanim()
 
