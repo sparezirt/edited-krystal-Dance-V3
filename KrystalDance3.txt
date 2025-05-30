@@ -613,11 +613,11 @@ elseif k == "l" then
         stopanim()
     dancing = true
     task.wait(.005)
-        sound69.SoundId = customasset("Dances/griddy.mp3")
+        sound69.SoundId = customasset("Dances/Conga.mp3")
         char.Humanoid.WalkSpeed = 4*char:GetScale()
         timeposcur = sound69.TimePosition 
 sound69:Play()
-        playanim(15704995372)
+        playanim(18985751348)
     else
         char.Humanoid.WalkSpeed = 14*char:GetScale()
         stopanim()
@@ -721,10 +721,10 @@ elseif k == "leftbracket" then
         stopanim()
         dancing = true
         task.wait(.005)
-        sound69.SoundId = customasset("Dances/true_heart.mp3")
+        sound69.SoundId = customasset("Dances/Lagtrain.mp3")
         timeposcur = sound69.TimePosition 
 sound69:Play()
-        playanim(131776726113292)
+        playanim(131559207454945)
     else
         stopanim()
         
@@ -764,7 +764,7 @@ sound69:Play()
         stopanim()
         dancing = true
         task.wait(.005)
-        sound69.SoundId = customasset("Dances/drip.mp3")
+        sound69.SoundId = customasset("Dances/ElevatorMusic2.mp3")
         timeposcur = sound69.TimePosition 
 sound69:Play()
         playanim(100177280567649)
