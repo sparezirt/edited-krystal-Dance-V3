@@ -975,7 +975,7 @@ elseif k == "l" then
         sound69.SoundId = customasset("Dances/CarShearer.mp3")
         timeposcur = sound69.TimePosition
         sound69:Play()
-        playanim(82286209518466,2.15)
+        playanim(82286209518466,1,95)
     else
         stopanim()
 
@@ -1050,7 +1050,7 @@ end
 			
 			math.randomseed(os.clock())
 			if math.random(1,2) == 1 then 
-			playanim(133312100962627,1,false)
+			playanim(122775909441631,1,false)
 			else 
 			playanim(14818257636,1,false)
 			end
