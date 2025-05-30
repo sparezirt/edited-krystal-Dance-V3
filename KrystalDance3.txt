@@ -545,11 +545,11 @@ elseif k == "f" then
         stopanim()
 dancing = true
 task.wait(.005)
-        sound69.SoundId = customasset("Dances/PizzaTowerTaunt.mp3")
+        sound69.SoundId = customasset("Dances/iMissTheQuiet.mp3")
         char.Humanoid.WalkSpeed = 4*char:GetScale()
         timeposcur = sound69.TimePosition 
 sound69:Play()
-        playanim(74706771494292)
+        playanim(126880865139406)
     else
         stopanim()
         
@@ -598,11 +598,11 @@ elseif k == "k" then
         stopanim()
         dancing = true
         task.wait(.005)
-        sound69.SoundId = customasset("Dances/dr.wav")
+        sound69.SoundId = customasset("Dances/doodle.mp3")
         char.Humanoid.WalkSpeed = 4*char:GetScale()
         timeposcur = sound69.TimePosition 
 sound69:Play()
-        playanim(12637912409,2)
+        playanim(137721173051346)
     else
         char.Humanoid.WalkSpeed = 14*char:GetScale()
         stopanim()
@@ -777,10 +777,10 @@ sound69:Play()
         stopanim()
         dancing = true
         task.wait(.005)
-        sound69.SoundId = customasset("Dances/Ironlung.mp3")
+        sound69.SoundId = customasset("Dances/HypnoDance.mp3")
         timeposcur = sound69.TimePosition 
 sound69:Play()
-        playanim(86276235951800,0.5)
+        playanim(97699704852712)
     else
         stopanim()
         
@@ -790,7 +790,7 @@ sound69:Play()
         stopanim()
         dancing = true
         task.wait(.005)
-        sound69.SoundId = customasset("Dances/whateverlike.mp3")
+        sound69.SoundId = customasset("Dances/kemusan.mp3")
         timeposcur = sound69.TimePosition 
 sound69:Play()
         playanim(83266223088944)
@@ -975,7 +975,7 @@ elseif k == "l" then
         sound69.SoundId = customasset("Dances/CarShearer.mp3")
         timeposcur = sound69.TimePosition
         sound69:Play()
-        playanim(82286209518466,1.95)
+        playanim(82286209518466,2)
     else
         stopanim()
 
