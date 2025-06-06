@@ -458,7 +458,7 @@ INPUTLOOP = uis.InputBegan:Connect(function(k,chatting)
             stopanim()
 dancing = true
 task.wait(.005)
-		    sound69.SoundId = customasset("Dances/rat.mp3")
+		    sound69.SoundId = customasset("Dances/RatDance.mp3")
 		    timeposcur = sound69.TimePosition 
 sound69:Play()
 		    playanim(106353328250763)
@@ -819,7 +819,7 @@ elseif k == "h" then
         sound69.SoundId = customasset("Dances/SadCatDance.mp3")
         timeposcur = sound69.TimePosition 
 sound69:Play()
-        playanim(11082671272)
+        playanim(11082671272,2)
     else
         stopanim()
         
